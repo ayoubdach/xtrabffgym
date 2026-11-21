@@ -1,8 +1,8 @@
 # Xtra BBF Gym
 
-> Salle de sport moderne à Cité El Khadhra, Tunis (Tunisie). Musculation, force, CrossFit, HIIT, cardio et coaching personnalisé par des coachs professionnels. Ambiance familiale, équipements modernes, ouverte 7j/7 dès 6h30. Note Google 4,6/5 (46 avis).
+> Salle de sport moderne à Cité El Khadhra, Tunis (Tunisie). Musculation, force, CrossFit, HIIT, cardio et coaching personnalisé par des coachs professionnels. Ambiance familiale, équipements modernes, ouverte 7j/7 dès 6h00. Note Google 4,6/5 (46 avis).
 
-Modern gym in Cité El Khadhra, Tunis, Tunisia: weight training, CrossFit, HIIT, cardio and personal coaching. Open 7 days a week from 6:30.
+Modern gym in Cité El Khadhra, Tunis, Tunisia: weight training, CrossFit, HIIT, cardio and personal coaching. Open 7 days a week from 6:00.
 
 ## Infos clés
 - Adresse : 117 Avenue Louis Braille, Cité El Khadhra, Tunis 1003, Tunisie
@@ -14,9 +14,8 @@ Modern gym in Cité El Khadhra, Tunis, Tunisia: weight training, CrossFit, HIIT,
 - Facebook : https://www.facebook.com/XtraBBFGym
 
 ## Horaires
-- Lundi à vendredi : 06:30 – 22:00
-- Samedi : 07:00 – 18:00
-- Dimanche : 07:00 – 16:00
+- Lundi à vendredi : 06:00 – 22:30
+- Samedi et dimanche : 07:00 – 18:00
 
 ## Tarifs (dinars tunisiens)
 - 1 mois : 90 DT (accès illimité, équipements modernes, vestiaires, parking)
