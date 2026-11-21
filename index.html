@@ -421,7 +421,7 @@
       .xg-dots{display:flex;flex-wrap:wrap;align-items:center;gap:2px;min-width:0;}
       .xg-dot{box-sizing:content-box;width:7px;height:7px;padding:0;border:7px solid transparent;background:rgba(255,255,255,.25);background-clip:content-box;border-radius:999px;cursor:pointer;transition:width .2s,background-color .2s;}
       .xg-dot:hover{background-color:rgba(204,255,0,.55);}
-      .xg-dot.is-active{width:20px;background-color:#ccff00;}
+      .xg-dot.is-active{width:20px;background-color:#ccff00;}@media (max-width:480px){.xg-dots{flex-wrap:nowrap;gap:0;}.xg-dot{width:6px;height:6px;border-width:4px 3px;}.xg-dot.is-active{width:16px;}}
       .xg-count{color:rgba(255,255,255,.55);font:600 12px/1 Inter,sans-serif;}
       .xg-cta{flex:0 0 auto;border:0;border-radius:999px;padding:13px 22px;background:#ccff00;color:#0a0a0a;font:800 13px/1 Inter,sans-serif;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;box-shadow:0 0 26px rgba(204,255,0,.35);transition:background .2s,transform .2s;}
       .xg-cta:hover{background:#fff;transform:translateY(-1px);}
