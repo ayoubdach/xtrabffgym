@@ -22,6 +22,41 @@
 */
 window.XTRA_VIDEOS = [
   {
+    src: "https://res.cloudinary.com/dlllcg1cm/video/upload/q_auto/f_auto/v1795298497/SaveClip.App_AQOilhTs2cQbJqw5kUL6WbVN7SvqvQ-T8uVdv237cPEn-iJ_tCD083GdrB4pGgz_rDu731shyClZKsQtrBnjo4UK_hJV05NqIqosAXY_teeydu.mp4",
+    title: "Une journée chez Xtra BBF",
+    tag: "Ambiance",
+    poster: 7,
+    duration: "0:26"
+  },
+  {
+    src: "https://res.cloudinary.com/dlllcg1cm/video/upload/q_auto/f_auto/v1795298501/SaveClip.App_AQMM2gLlaQKZcCh5wrv33-qS6kyfIcf3qn0Ntpo6WlF5dOgXQGzXCrsIRrNu5yRoYTIbN0xPdrT46z5TgbUwB2G1Tnd32UfY85sX7kc_gjew4q.mp4",
+    title: "Détermination",
+    tag: "Résultats",
+    poster: 9,
+    duration: "0:16"
+  },
+  {
+    src: "https://res.cloudinary.com/dlllcg1cm/video/upload/q_auto/f_auto/v1795298501/SaveClip.App_AQNQtgj0m2lnWPkt7JsbNdMcjDj2c4WH95guPPEyXHwuy2k4noEafKeF5otnmoym_8TU0MLhWJ5me-XQ6qtPH20KhYG4ZvzBcQx7bS0_svgezu.mp4",
+    title: "Xtra BBF en images",
+    tag: "Ambiance",
+    poster: 27,
+    duration: "0:48"
+  },
+  {
+    src: "https://res.cloudinary.com/dlllcg1cm/video/upload/q_auto/f_auto/v1795298501/SaveClip.App_AQN85aYefL6p1DwPZAqZhGNDcPLQv8i91NFchI3JRo5DYIsb7YuvMw819uCo3wGs9eEGU-RurqyK2bIzxOGiB8HcqQHH41fM2pFUNgo_sui2q7.mp4",
+    title: "Coaching au quotidien",
+    tag: "Coaching",
+    poster: 16,
+    duration: "0:19"
+  },
+  {
+    src: "https://res.cloudinary.com/dlllcg1cm/video/upload/q_auto/f_auto/v1795298502/SaveClip.App_AQPYhZyWHdHLWxmYHa-Pc1NHUn66eYXuOUrQQUSO9Q3ME3cxhGgWaKESXfc6teBPY-zT3Rmja3RfHb3br5t7XjKwhbmugQ2UaSiCrwQ_yp55z2.mp4",
+    title: "1% meilleur chaque jour",
+    tag: "Coaching",
+    poster: 7,
+    duration: "0:14"
+  },
+  {
     src: "https://res.cloudinary.com/dlllcg1cm/video/upload/q_auto/f_auto/v1781054035/SaveClip.App_AQOtRAcQ1a4ZELv5a5lqisX-pI8s5h9wLhTYNERWkmrzNLNFrEgm55HVpMWCOnnAfjiI_fdiK9lgI9y9d0B481FlUtoFqZji9CEYgoY_zxooly.mp4",
     title: "Bienvenue chez Xtra BBF",
     tag: "Ambiance",
