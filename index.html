@@ -222,7 +222,77 @@
     "https://www.instagram.com/xtrabbfgym/",
     "https://www.facebook.com/XtraBBFGym",
     "https://www.google.com/maps?cid=13538230604953892286"
-   ]
+   ],
+   "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Cours et activités",
+    "itemListElement": [
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Musculation",
+       "description": "Plateau complet de machines et de charges libres pour prendre du muscle, gagner en force et sculpter ta silhouette. Nos coachs t'aident sur la technique avec un programme adapté à ton objectif."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Cardio",
+       "description": "Tapis, vélos et machines cardio pour améliorer ton souffle, brûler des calories et garder un cœur en pleine forme, à ton rythme."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Cardio Mix",
+       "description": "Un cours collectif qui enchaîne des exercices cardio variés en musique. Ambiance garantie et calories brûlées sans voir le temps passer."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Circuit Training",
+       "description": "Une série d'ateliers force et cardio enchaînés avec peu de repos. Un entraînement complet qui fait travailler tout le corps en une seule séance."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "TRX",
+       "description": "Entraînement au poids du corps avec les sangles TRX : gainage, force et équilibre. Chaque exercice s'adapte à ton niveau en changeant simplement l'angle."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "C.A.F",
+       "description": "Un cours ciblé pour raffermir et tonifier le bas du corps et la sangle abdominale, avec des exercices simples et efficaces."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "100% Abdo",
+       "description": "Une séance 100 % dédiée aux abdominaux et au gainage pour un ventre plus ferme, une meilleure posture et un dos protégé."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Stretching",
+       "description": "Étirements guidés pour gagner en souplesse, mieux récupérer après l'effort et prévenir les blessures. Le complément idéal de tes entraînements."
+      }
+     }
+    ]
+   }
   },
   {
    "@type": "FAQPage",
@@ -273,7 +343,7 @@
      "name": "Quelles activités peut-on pratiquer ?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Musculation, force, CrossFit, HIIT, cardio et fitness, encadrés par nos coachs Tarek, Chams, Rihem et Salim, avec des équipements modernes."
+      "text": "Musculation et cardio en salle, CrossFit, HIIT et des cours collectifs : Cardio mix, Circuit training, TRX, C.A.F (cuisses-abdos-fessiers), 100% Abdo et Stretching. Le tout encadré par nos coachs Tarek, Chams, Rihem et Salim, avec des équipements modernes."
      }
     },
     {
@@ -372,6 +442,112 @@
       .xh-today{background:rgba(204,255,0,.06);border-radius:10px;padding-left:10px!important;padding-right:10px!important;margin:0 -10px;}
       .xh-today span:first-child{color:#fff!important;font-weight:600;}
     @media (min-width:640px) and (max-width:1023px){#reviews .grid.lg\:grid-cols-3>:last-child:nth-child(odd){grid-column:1/-1;}}</style>
+    <style id="xtra-courses">
+      .xc{display:none;position:relative;overflow:hidden;isolation:isolate;background:#0a0a0a;padding:120px 0 130px;}
+      .xc.xc-ready{display:block;}
+      .xc-bg{position:absolute;inset:0;z-index:-2;}
+      .xc-poster,.xc-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.32;filter:saturate(.85) contrast(1.1);}
+      .xc-video{opacity:0;transition:opacity 1.2s ease;}
+      .xc-video.is-on{opacity:.36;}
+      .xc-shade{position:absolute;inset:0;background:radial-gradient(60% 50% at 20% 20%,rgba(204,255,0,.10),transparent 70%),linear-gradient(180deg,#0a0a0a 0%,rgba(10,10,10,.55) 22%,rgba(10,10,10,.72) 70%,#0a0a0a 100%);}
+      .xc-lines{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:radial-gradient(ellipse at center,#000 25%,transparent 72%);mask-image:radial-gradient(ellipse at center,#000 25%,transparent 72%);}
+      .xc-ghost{position:absolute;left:0;top:50%;z-index:-1;display:flex;white-space:nowrap;transform:translateY(-50%);pointer-events:none;font-family:'Bebas Neue',sans-serif;font-size:clamp(150px,24vw,400px);line-height:1;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.055);}
+      .xc-ghost span{display:block;padding-right:.25em;animation:xcMarq 70s linear infinite;}
+      .xc:not(.xc-in) .xc-ghost span{animation-play-state:paused;}
+      @keyframes xcMarq{to{transform:translateX(-100%);}}
+      .xc-wrap{position:relative;max-width:1280px;margin:0 auto;padding:0 32px;}
+      .xc-head{text-align:center;margin-bottom:64px;}
+      .xc-h2{margin:0;font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:clamp(52px,7.4vw,112px);line-height:.92;color:#fff;letter-spacing:.01em;}
+      .xc-h2 span{display:block;color:#ccff00;text-shadow:0 0 42px rgba(204,255,0,.35);}
+      .xc-sub{margin:20px auto 0;max-width:560px;color:rgba(255,255,255,.5);font:400 16px/1.6 Inter,sans-serif;}
+      .xc-stats{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:26px 0 0;padding:0;list-style:none;}
+      .xc-stats li{padding:8px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03);color:rgba(255,255,255,.5);font:500 12px/1 Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;}
+      .xc-stats b{color:#ccff00;font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:18px;letter-spacing:.04em;margin-right:4px;}
+      .xc-stage{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px;align-items:center;}
+      .xc-listwrap{position:relative;}
+      .xc-list{position:relative;margin:0;padding:0;list-style:none;border-top:1px solid rgba(255,255,255,.06);}
+      .xc-list li{border-bottom:1px solid rgba(255,255,255,.06);}
+      .xc-tab{all:unset;box-sizing:border-box;display:grid;grid-template-columns:40px 1fr auto;align-items:center;gap:8px;width:100%;padding:12px 6px 12px 26px;cursor:pointer;-webkit-tap-highlight-color:transparent;}
+      .xc-tab:focus-visible{outline:2px solid #ccff00;outline-offset:2px;border-radius:8px;}
+      .xc-num{font:700 11px/1 Inter,sans-serif;letter-spacing:.15em;color:rgba(204,255,0,.45);transition:color .3s;}
+      .xc-name{font-family:'Bebas Neue',sans-serif;font-size:clamp(30px,3.1vw,46px);line-height:1;color:rgba(255,255,255,.26);transition:color .35s,transform .5s cubic-bezier(.16,1,.3,1);}
+      .xc-kind{font:600 10px/1 Inter,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.2);transition:color .3s;}
+      .xc-tab:hover .xc-name{color:rgba(255,255,255,.65);transform:translateX(6px);}
+      .xc-tab.is-on .xc-name{color:#fff;transform:translateX(12px);}
+      .xc-tab.is-on .xc-num{color:#ccff00;}
+      .xc-tab.is-on .xc-kind{color:rgba(204,255,0,.7);}
+      .xc-ind{position:absolute;left:0;top:0;width:3px;height:0;border-radius:3px;background:#ccff00;box-shadow:0 0 18px rgba(204,255,0,.8),0 0 4px #ccff00;transition:transform .55s cubic-bezier(.16,1,.3,1),height .55s cubic-bezier(.16,1,.3,1);z-index:1;}
+      .xc-panel{position:relative;border-radius:28px;padding:44px 44px 40px;overflow:hidden;background:linear-gradient(rgba(12,12,12,.86),rgba(12,12,12,.86)) padding-box,linear-gradient(140deg,rgba(204,255,0,.65),rgba(255,255,255,.06) 38%,rgba(255,255,255,.04) 70%,rgba(204,255,0,.25)) border-box;border:1px solid transparent;box-shadow:0 50px 120px -50px rgba(204,255,0,.28),0 30px 80px -30px rgba(0,0,0,.8);}
+      .xc-panel::before{content:"";position:absolute;inset:0;background:radial-gradient(70% 60% at 85% 0%,rgba(204,255,0,.14),transparent 60%);pointer-events:none;}
+      .xc-cards{display:grid;grid-template-columns:minmax(0,1fr);}.xc-listwrap,.xc-panel{min-width:0;}
+      .xc-card{grid-area:1/1;position:relative;opacity:0;visibility:hidden;transform:translateY(18px);transition:opacity .45s ease,transform .6s cubic-bezier(.16,1,.3,1),visibility 0s linear .45s;}
+      .xc-card.is-on{opacity:1;visibility:visible;transform:none;transition-delay:0s;}
+      .xc-big{position:absolute;right:-8px;top:-34px;font-family:'Bebas Neue',sans-serif;font-size:190px;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(204,255,0,.22);pointer-events:none;}
+      .xc-ico{width:62px;height:62px;fill:none;stroke:#ccff00;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 10px rgba(204,255,0,.45));margin-bottom:18px;}
+      .xc-ico *{stroke-dasharray:1;stroke-dashoffset:0;}
+      .xc-card.is-on .xc-ico *{animation:xcDraw 1.3s .1s cubic-bezier(.65,0,.35,1) both;}
+      @keyframes xcDraw{from{stroke-dashoffset:1;}to{stroke-dashoffset:0;}}
+      .xc-kicker{display:flex;align-items:center;gap:8px;margin:0 0 10px;color:#ccff00;font:700 10px/1 Inter,sans-serif;letter-spacing:.25em;text-transform:uppercase;}
+      .xc-title{margin:0;font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:clamp(56px,6vw,92px);line-height:.9;color:#fff;letter-spacing:.01em;}
+      .xc-tag{margin:8px 0 0;color:rgba(255,255,255,.75);font:600 15px/1.4 Inter,sans-serif;}
+      .xc-desc{margin:16px 0 0;max-width:540px;color:rgba(255,255,255,.5);font:400 15px/1.7 Inter,sans-serif;}
+      .xc-meta{display:flex;flex-wrap:wrap;gap:28px;margin-top:26px;padding-top:22px;border-top:1px solid rgba(255,255,255,.07);}
+      .xc-meta>div{display:flex;flex-direction:column;gap:9px;}
+      .xc-label{color:rgba(255,255,255,.3);font:600 10px/1 Inter,sans-serif;letter-spacing:.2em;text-transform:uppercase;}
+      .xc-val{color:#fff;font:600 14px/1.2 Inter,sans-serif;}
+      .xc-bars{display:flex;gap:5px;padding:3px 0;}
+      .xc-bars i{display:block;width:24px;height:6px;border-radius:3px;background:rgba(255,255,255,.1);}
+      .xc-bars[data-v="1"] i:nth-child(-n+1),.xc-bars[data-v="2"] i:nth-child(-n+2),.xc-bars[data-v="3"] i:nth-child(-n+3),.xc-bars[data-v="4"] i:nth-child(-n+4),.xc-bars[data-v="5"] i{background:#ccff00;box-shadow:0 0 10px rgba(204,255,0,.45);}
+      .xc-card.is-on .xc-bars i{animation:xcBar .45s cubic-bezier(.16,1,.3,1) both;}
+      .xc-card.is-on .xc-bars i:nth-child(2){animation-delay:.08s;}.xc-card.is-on .xc-bars i:nth-child(3){animation-delay:.16s;}.xc-card.is-on .xc-bars i:nth-child(4){animation-delay:.24s;}.xc-card.is-on .xc-bars i:nth-child(5){animation-delay:.32s;}
+      @keyframes xcBar{from{transform:scaleX(0);transform-origin:left;}to{transform:scaleX(1);transform-origin:left;}}
+      .xc-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;}
+      .xc-btn,.xc-btn2{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 26px;border-radius:999px;font:700 14px/1 Inter,sans-serif;text-decoration:none;cursor:pointer;transition:transform .25s,background .25s,color .25s,box-shadow .25s;}
+      .xc-btn{background:#ccff00;color:#0a0a0a;box-shadow:0 10px 30px -10px rgba(204,255,0,.6);}
+      .xc-btn:hover{background:#fff;transform:translateY(-2px);}
+      .xc-btn2{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.18);}
+      .xc-btn2:hover{border-color:#ccff00;color:#ccff00;}
+      .xc-card.is-on .xc-kicker,.xc-card.is-on .xc-tag,.xc-card.is-on .xc-desc,.xc-card.is-on .xc-meta,.xc-card.is-on .xc-cta{animation:xcUp .6s cubic-bezier(.16,1,.3,1) both;}
+      .xc-card.is-on .xc-kicker{animation-delay:.05s;}.xc-card.is-on .xc-tag{animation-delay:.2s;}.xc-card.is-on .xc-desc{animation-delay:.28s;}.xc-card.is-on .xc-meta{animation-delay:.36s;}.xc-card.is-on .xc-cta{animation-delay:.44s;}
+      .xc-card.is-on .xc-title{animation:xcWipe .8s .1s cubic-bezier(.77,0,.18,1) both;}
+      .xc-card.is-on .xc-big{animation:xcBig 1s cubic-bezier(.16,1,.3,1) both;}
+      @keyframes xcUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
+      @keyframes xcWipe{from{clip-path:inset(0 100% 0 0);}to{clip-path:inset(0 0 0 0);}}
+      @keyframes xcBig{from{opacity:0;transform:translateX(30px);}to{opacity:1;transform:none;}}
+      .xc-progress{position:absolute;left:44px;right:44px;bottom:0;height:2px;background:rgba(255,255,255,.06);overflow:hidden;}
+      .xc-progress i{display:block;height:100%;background:#ccff00;box-shadow:0 0 10px #ccff00;transform-origin:left;transform:scaleX(0);}
+      .xc.xc-auto .xc-progress i{animation:xcProg 6.5s linear both;}
+      .xc.xc-hold .xc-progress i,.xc:not(.xc-in) .xc-progress i{animation-play-state:paused;}
+      .xc.xc-manual .xc-progress{opacity:0;}
+      @keyframes xcProg{from{transform:scaleX(0);}to{transform:scaleX(1);}}
+      @media (max-width:1023px){
+        .xc{padding:84px 0 92px;}
+        .xc-wrap{padding:0 20px;}
+        .xc-head{margin-bottom:34px;}
+        .xc-stage{grid-template-columns:minmax(0,1fr);gap:22px;}
+        .xc-ind{display:none;}
+        .xc-list{display:flex;gap:8px;overflow-x:auto;border:0;margin:0 -20px;padding:4px 20px 8px;scroll-snap-type:x proximity;scrollbar-width:none;overscroll-behavior-x:contain;}
+        .xc-list::-webkit-scrollbar{display:none;}
+        .xc-list li{border:0;flex:0 0 auto;scroll-snap-align:center;}
+        .xc-tab{display:flex;gap:8px;padding:11px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.03);}
+        .xc-name{font-size:21px;}
+        .xc-kind{display:none;}
+        .xc-tab:hover .xc-name,.xc-tab.is-on .xc-name{transform:none;}
+        .xc-tab.is-on{background:#ccff00;border-color:#ccff00;box-shadow:0 0 24px rgba(204,255,0,.35);}
+        .xc-tab.is-on .xc-name,.xc-tab.is-on .xc-num{color:#0a0a0a;}
+        .xc-panel{padding:30px 24px 30px;border-radius:24px;}
+        .xc-progress{left:24px;right:24px;}
+        .xc-big{font-size:130px;top:-22px;right:-6px;}
+        .xc-ico{width:52px;height:52px;margin-bottom:14px;}
+        .xc-meta{gap:22px;}
+        .xc-cta .xc-btn{flex:1 1 auto;}
+      }
+      @media (max-width:420px){.xc-cta{flex-direction:column;}.xc-btn,.xc-btn2{width:100%;}}
+      @media (prefers-reduced-motion: reduce){
+        .xc-ghost span,.xc-card,.xc-card *,.xc-ind,.xc-name{animation:none!important;transition:none!important;}
+        .xc-progress{display:none;}
+      }
+    </style>
     <script src="/videos.js" defer></script>
     <style id="xtra-gallery-v2">
       #gallery .xg-head{margin-bottom:40px;}
@@ -5156,12 +5332,14 @@ function JK(){const i=fe.useRef(null),G=fe.useRef(null),[e,t]=fe.useState(!1),[f
         <p>1 mois 90 DT · 3 mois 230 DT · 6 mois 380 DT · 12 mois 620 DT. Frais d'inscription 30 DT (première fois). Étudiants INSAT : 3 mois 180 DT, 6 mois 300 DT, 12 mois 400 DT.</p>
         <h2>Horaires</h2>
         <p>Lundi–vendredi 06:00–22:30 · Samedi et dimanche 07:00–18:00.</p>
+        <h2>Cours</h2>
+        <p>Musculation · Cardio · Cardio mix · Circuit training · TRX · C.A.F (cuisses-abdos-fessiers) · 100% Abdo · Stretching.</p>
         <h2>Coachs</h2>
         <p>Coach Tarek (musculation &amp; force), Coach Chams (CrossFit &amp; HIIT), Coach Rihem (fitness &amp; bien-être), Coach Salim (musculation &amp; force).</p>
         <h2>Contact</h2>
         <p>117 Avenue Louis Braille, Cité El Khadhra, Tunis 1003 · Téléphone / WhatsApp : <a href="tel:+21655755093">55 755 093</a> · <a href="mailto:xtrabbfgym@gmail.com">xtrabbfgym@gmail.com</a> · <a href="https://www.instagram.com/xtrabbfgym/">Instagram</a> · <a href="https://www.facebook.com/XtraBBFGym">Facebook</a> · <a href="https://www.google.com/maps?cid=13538230604953892286">Google Maps</a></p>
         <h2>Questions fréquentes</h2>
-        <h3>Où se trouve Xtra BBF Gym ?</h3><p>Xtra BBF Gym se trouve au 117 Avenue Louis Braille, Cité El Khadhra, Tunis 1003. Un parking est disponible pour les membres.</p><h3>Quels sont les horaires d'ouverture ?</h3><p>La salle est ouverte 7 jours sur 7 : du lundi au vendredi de 06:00 à 22:30, le samedi et le dimanche de 07:00 à 18:00.</p><h3>Combien coûte l'abonnement ?</h3><p>1 mois : 90 DT. 3 mois : 230 DT. 6 mois : 380 DT. 12 mois : 620 DT. Des frais d'inscription de 30 DT s'appliquent uniquement la première fois.</p><h3>Y a-t-il un tarif étudiant ?</h3><p>Oui, les étudiants de l'INSAT ont un tarif réduit : 3 mois à 180 DT, 6 mois à 300 DT et 12 mois à 400 DT (1 mois : 90 DT).</p><h3>Le coaching est-il inclus ?</h3><p>Oui. Dès l'abonnement 3 mois, le coaching est inclus avec un programme personnalisé et un suivi mensuel. Les abonnements 6 et 12 mois ajoutent le coaching premium, des conseils nutrition et les cours collectifs.</p><h3>Quelles activités peut-on pratiquer ?</h3><p>Musculation, force, CrossFit, HIIT, cardio et fitness, encadrés par nos coachs Tarek, Chams, Rihem et Salim, avec des équipements modernes.</p><h3>Y a-t-il des vestiaires et des douches ?</h3><p>Oui, la salle dispose de vestiaires et de douches. Les abonnements 3, 6 et 12 mois donnent accès aux vestiaires VIP.</p><h3>Comment s'inscrire ?</h3><p>Cliquez sur « S'inscrire » sur le site : votre demande est envoyée sur WhatsApp. Vous pouvez aussi appeler ou écrire au 55 755 093, ou passer directement à la salle.</p>
+        <h3>Où se trouve Xtra BBF Gym ?</h3><p>Xtra BBF Gym se trouve au 117 Avenue Louis Braille, Cité El Khadhra, Tunis 1003. Un parking est disponible pour les membres.</p><h3>Quels sont les horaires d'ouverture ?</h3><p>La salle est ouverte 7 jours sur 7 : du lundi au vendredi de 06:00 à 22:30, le samedi et le dimanche de 07:00 à 18:00.</p><h3>Combien coûte l'abonnement ?</h3><p>1 mois : 90 DT. 3 mois : 230 DT. 6 mois : 380 DT. 12 mois : 620 DT. Des frais d'inscription de 30 DT s'appliquent uniquement la première fois.</p><h3>Y a-t-il un tarif étudiant ?</h3><p>Oui, les étudiants de l'INSAT ont un tarif réduit : 3 mois à 180 DT, 6 mois à 300 DT et 12 mois à 400 DT (1 mois : 90 DT).</p><h3>Le coaching est-il inclus ?</h3><p>Oui. Dès l'abonnement 3 mois, le coaching est inclus avec un programme personnalisé et un suivi mensuel. Les abonnements 6 et 12 mois ajoutent le coaching premium, des conseils nutrition et les cours collectifs.</p><h3>Quelles activités peut-on pratiquer ?</h3><p>Musculation et cardio en salle, CrossFit, HIIT et des cours collectifs : Cardio mix, Circuit training, TRX, C.A.F (cuisses-abdos-fessiers), 100% Abdo et Stretching. Le tout encadré par nos coachs Tarek, Chams, Rihem et Salim, avec des équipements modernes.</p><h3>Y a-t-il des vestiaires et des douches ?</h3><p>Oui, la salle dispose de vestiaires et de douches. Les abonnements 3, 6 et 12 mois donnent accès aux vestiaires VIP.</p><h3>Comment s'inscrire ?</h3><p>Cliquez sur « S'inscrire » sur le site : votre demande est envoyée sur WhatsApp. Vous pouvez aussi appeler ou écrire au 55 755 093, ou passer directement à la salle.</p>
       </main>
     </div></div>
 
@@ -6960,6 +7138,171 @@ function JK(){const i=fe.useRef(null),G=fe.useRef(null),[e,t]=fe.useState(!1),[f
         window.addEventListener('load', updateXtraOfferCountdown);
       })();
     </script>
+    <section id="services" class="xc" aria-labelledby="xc-title">
+      <div class="xc-bg" aria-hidden="true">
+        <img class="xc-poster" src="https://res.cloudinary.com/dlllcg1cm/video/upload/so_27,w_1280,q_auto,f_auto/v1795298501/SaveClip.App_AQNQtgj0m2lnWPkt7JsbNdMcjDj2c4WH95guPPEyXHwuy2k4noEafKeF5otnmoym_8TU0MLhWJ5me-XQ6qtPH20KhYG4ZvzBcQx7bS0_svgezu.jpg" srcset="https://res.cloudinary.com/dlllcg1cm/video/upload/so_27,w_720,q_auto,f_auto/v1795298501/SaveClip.App_AQNQtgj0m2lnWPkt7JsbNdMcjDj2c4WH95guPPEyXHwuy2k4noEafKeF5otnmoym_8TU0MLhWJ5me-XQ6qtPH20KhYG4ZvzBcQx7bS0_svgezu.jpg 720w, https://res.cloudinary.com/dlllcg1cm/video/upload/so_27,w_1280,q_auto,f_auto/v1795298501/SaveClip.App_AQNQtgj0m2lnWPkt7JsbNdMcjDj2c4WH95guPPEyXHwuy2k4noEafKeF5otnmoym_8TU0MLhWJ5me-XQ6qtPH20KhYG4ZvzBcQx7bS0_svgezu.jpg 1280w" sizes="100vw" alt="" loading="lazy" decoding="async">
+        <video class="xc-video" muted loop playsinline preload="none" data-m="https://res.cloudinary.com/dlllcg1cm/video/upload/so_18,du_8,w_480,q_auto:low,f_auto,ac_none/v1795298501/SaveClip.App_AQNQtgj0m2lnWPkt7JsbNdMcjDj2c4WH95guPPEyXHwuy2k4noEafKeF5otnmoym_8TU0MLhWJ5me-XQ6qtPH20KhYG4ZvzBcQx7bS0_svgezu.mp4" data-d="https://res.cloudinary.com/dlllcg1cm/video/upload/so_18,du_8,w_960,br_400k,f_auto,ac_none/v1795298501/SaveClip.App_AQNQtgj0m2lnWPkt7JsbNdMcjDj2c4WH95guPPEyXHwuy2k4noEafKeF5otnmoym_8TU0MLhWJ5me-XQ6qtPH20KhYG4ZvzBcQx7bS0_svgezu.mp4"></video>
+        <div class="xc-shade"></div>
+        <div class="xc-lines"></div>
+      </div>
+      <div class="xc-ghost" aria-hidden="true"><span>COURS · TRAINING · COURS · TRAINING · </span><span>COURS · TRAINING · COURS · TRAINING · </span></div>
+      <div class="xc-wrap">
+        <header class="xc-head">
+          <div class="xv-pill"><span class="xv-dot"></span> Nos cours</div>
+          <h2 id="xc-title" class="xc-h2">8 FAÇONS DE <span>TE DÉPASSER</span></h2>
+          <p class="xc-sub">Musculation, cardio et cours collectifs encadrés par nos coachs. Choisis ton cours, on s'occupe du reste.</p>
+          <ul class="xc-stats"><li><b>08</b> cours</li><li><b>04</b> coachs</li><li><b>7j/7</b> ouvert</li></ul>
+        </header>
+        <div class="xc-stage">
+          <div class="xc-listwrap">
+            <span class="xc-ind" aria-hidden="true"></span>
+            <ol class="xc-list" role="tablist" aria-label="Nos cours">
+          <li><button type="button" role="tab" class="xc-tab is-on" id="xc-tab-0" aria-controls="xc-card-0" aria-selected="true" tabindex="0" data-i="0"><span class="xc-num">01</span><span class="xc-name">Musculation</span><span class="xc-kind">En salle</span></button></li>
+          <li><button type="button" role="tab" class="xc-tab" id="xc-tab-1" aria-controls="xc-card-1" aria-selected="false" tabindex="-1" data-i="1"><span class="xc-num">02</span><span class="xc-name">Cardio</span><span class="xc-kind">En salle</span></button></li>
+          <li><button type="button" role="tab" class="xc-tab" id="xc-tab-2" aria-controls="xc-card-2" aria-selected="false" tabindex="-1" data-i="2"><span class="xc-num">03</span><span class="xc-name">Cardio Mix</span><span class="xc-kind">Cours collectif</span></button></li>
+          <li><button type="button" role="tab" class="xc-tab" id="xc-tab-3" aria-controls="xc-card-3" aria-selected="false" tabindex="-1" data-i="3"><span class="xc-num">04</span><span class="xc-name">Circuit Training</span><span class="xc-kind">Cours collectif</span></button></li>
+          <li><button type="button" role="tab" class="xc-tab" id="xc-tab-4" aria-controls="xc-card-4" aria-selected="false" tabindex="-1" data-i="4"><span class="xc-num">05</span><span class="xc-name">TRX</span><span class="xc-kind">Cours collectif</span></button></li>
+          <li><button type="button" role="tab" class="xc-tab" id="xc-tab-5" aria-controls="xc-card-5" aria-selected="false" tabindex="-1" data-i="5"><span class="xc-num">06</span><span class="xc-name">C.A.F</span><span class="xc-kind">Cours collectif</span></button></li>
+          <li><button type="button" role="tab" class="xc-tab" id="xc-tab-6" aria-controls="xc-card-6" aria-selected="false" tabindex="-1" data-i="6"><span class="xc-num">07</span><span class="xc-name">100% Abdo</span><span class="xc-kind">Cours collectif</span></button></li>
+          <li><button type="button" role="tab" class="xc-tab" id="xc-tab-7" aria-controls="xc-card-7" aria-selected="false" tabindex="-1" data-i="7"><span class="xc-num">08</span><span class="xc-name">Stretching</span><span class="xc-kind">Cours collectif</span></button></li>
+            </ol>
+          </div>
+          <div class="xc-panel">
+            <div class="xc-cards">
+            <article class="xc-card is-on" id="xc-card-0" role="tabpanel" aria-labelledby="xc-tab-0" data-i="0">
+              <span class="xc-big" aria-hidden="true">01</span>
+              <svg class="xc-ico" viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 7v10M3 9v6M18 7v10M21 9v6M6 12h12"/></svg>
+              <p class="xc-kicker"><span class="xv-dot"></span>En salle</p>
+              <h3 class="xc-title">Musculation</h3>
+              <p class="xc-tag">Force, masse &amp; puissance</p>
+              <p class="xc-desc">Plateau complet de machines et de charges libres pour prendre du muscle, gagner en force et sculpter ta silhouette. Nos coachs t'aident sur la technique avec un programme adapté à ton objectif.</p>
+              <div class="xc-meta">
+                <div><span class="xc-label">Intensité</span><span class="xc-bars" data-v="4" role="img" aria-label="Intensité 4 sur 5"><i></i><i></i><i></i><i></i><i></i></span></div>
+                <div><span class="xc-label">Objectif</span><span class="xc-val">Force · Masse</span></div>
+              </div>
+              <div class="xc-cta">
+                <a class="xc-btn" href="https://wa.me/21655755093?text=Bonjour%20Xtra%20BBF%20Gym%2C%20je%20souhaite%20des%20informations%20sur%20le%20cours%20Musculation." target="_blank" rel="noopener noreferrer">Réserver ce cours <span aria-hidden="true">→</span></a>
+                <button type="button" class="xc-btn2" data-xc-signup>S'inscrire</button>
+              </div>
+            </article>
+            <article class="xc-card" id="xc-card-1" role="tabpanel" aria-labelledby="xc-tab-1" data-i="1">
+              <span class="xc-big" aria-hidden="true">02</span>
+              <svg class="xc-ico" viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path pathLength="1" d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></svg>
+              <p class="xc-kicker"><span class="xv-dot"></span>En salle</p>
+              <h3 class="xc-title">Cardio</h3>
+              <p class="xc-tag">Endurance &amp; brûle-graisses</p>
+              <p class="xc-desc">Tapis, vélos et machines cardio pour améliorer ton souffle, brûler des calories et garder un cœur en pleine forme, à ton rythme.</p>
+              <div class="xc-meta">
+                <div><span class="xc-label">Intensité</span><span class="xc-bars" data-v="3" role="img" aria-label="Intensité 3 sur 5"><i></i><i></i><i></i><i></i><i></i></span></div>
+                <div><span class="xc-label">Objectif</span><span class="xc-val">Endurance · Perte de poids</span></div>
+              </div>
+              <div class="xc-cta">
+                <a class="xc-btn" href="https://wa.me/21655755093?text=Bonjour%20Xtra%20BBF%20Gym%2C%20je%20souhaite%20des%20informations%20sur%20le%20cours%20Cardio." target="_blank" rel="noopener noreferrer">Réserver ce cours <span aria-hidden="true">→</span></a>
+                <button type="button" class="xc-btn2" data-xc-signup>S'inscrire</button>
+              </div>
+            </article>
+            <article class="xc-card" id="xc-card-2" role="tabpanel" aria-labelledby="xc-tab-2" data-i="2">
+              <span class="xc-big" aria-hidden="true">03</span>
+              <svg class="xc-ico" viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+              <p class="xc-kicker"><span class="xv-dot"></span>Cours collectif</p>
+              <h3 class="xc-title">Cardio Mix</h3>
+              <p class="xc-tag">L'énergie du groupe</p>
+              <p class="xc-desc">Un cours collectif qui enchaîne des exercices cardio variés en musique. Ambiance garantie et calories brûlées sans voir le temps passer.</p>
+              <div class="xc-meta">
+                <div><span class="xc-label">Intensité</span><span class="xc-bars" data-v="4" role="img" aria-label="Intensité 4 sur 5"><i></i><i></i><i></i><i></i><i></i></span></div>
+                <div><span class="xc-label">Objectif</span><span class="xc-val">Cardio · Tonus</span></div>
+              </div>
+              <div class="xc-cta">
+                <a class="xc-btn" href="https://wa.me/21655755093?text=Bonjour%20Xtra%20BBF%20Gym%2C%20je%20souhaite%20des%20informations%20sur%20le%20cours%20Cardio%20Mix." target="_blank" rel="noopener noreferrer">Réserver ce cours <span aria-hidden="true">→</span></a>
+                <button type="button" class="xc-btn2" data-xc-signup>S'inscrire</button>
+              </div>
+            </article>
+            <article class="xc-card" id="xc-card-3" role="tabpanel" aria-labelledby="xc-tab-3" data-i="3">
+              <span class="xc-big" aria-hidden="true">04</span>
+              <svg class="xc-ico" viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path pathLength="1" d="M21 3v5h-5"/><path pathLength="1" d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path pathLength="1" d="M8 16H3v5"/></svg>
+              <p class="xc-kicker"><span class="xv-dot"></span>Cours collectif</p>
+              <h3 class="xc-title">Circuit Training</h3>
+              <p class="xc-tag">Ateliers en rotation</p>
+              <p class="xc-desc">Une série d'ateliers force et cardio enchaînés avec peu de repos. Un entraînement complet qui fait travailler tout le corps en une seule séance.</p>
+              <div class="xc-meta">
+                <div><span class="xc-label">Intensité</span><span class="xc-bars" data-v="5" role="img" aria-label="Intensité 5 sur 5"><i></i><i></i><i></i><i></i><i></i></span></div>
+                <div><span class="xc-label">Objectif</span><span class="xc-val">Corps entier · Explosivité</span></div>
+              </div>
+              <div class="xc-cta">
+                <a class="xc-btn" href="https://wa.me/21655755093?text=Bonjour%20Xtra%20BBF%20Gym%2C%20je%20souhaite%20des%20informations%20sur%20le%20cours%20Circuit%20Training." target="_blank" rel="noopener noreferrer">Réserver ce cours <span aria-hidden="true">→</span></a>
+                <button type="button" class="xc-btn2" data-xc-signup>S'inscrire</button>
+              </div>
+            </article>
+            <article class="xc-card" id="xc-card-4" role="tabpanel" aria-labelledby="xc-tab-4" data-i="4">
+              <span class="xc-big" aria-hidden="true">05</span>
+              <svg class="xc-ico" viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M12 2v3M12 5 7 16M12 5l5 11"/><rect pathLength="1" x="4.5" y="16" width="5" height="4" rx="1"/><rect pathLength="1" x="14.5" y="16" width="5" height="4" rx="1"/></svg>
+              <p class="xc-kicker"><span class="xv-dot"></span>Cours collectif</p>
+              <h3 class="xc-title">TRX</h3>
+              <p class="xc-tag">Sangles de suspension</p>
+              <p class="xc-desc">Entraînement au poids du corps avec les sangles TRX : gainage, force et équilibre. Chaque exercice s'adapte à ton niveau en changeant simplement l'angle.</p>
+              <div class="xc-meta">
+                <div><span class="xc-label">Intensité</span><span class="xc-bars" data-v="4" role="img" aria-label="Intensité 4 sur 5"><i></i><i></i><i></i><i></i><i></i></span></div>
+                <div><span class="xc-label">Objectif</span><span class="xc-val">Gainage · Force</span></div>
+              </div>
+              <div class="xc-cta">
+                <a class="xc-btn" href="https://wa.me/21655755093?text=Bonjour%20Xtra%20BBF%20Gym%2C%20je%20souhaite%20des%20informations%20sur%20le%20cours%20TRX." target="_blank" rel="noopener noreferrer">Réserver ce cours <span aria-hidden="true">→</span></a>
+                <button type="button" class="xc-btn2" data-xc-signup>S'inscrire</button>
+              </div>
+            </article>
+            <article class="xc-card" id="xc-card-5" role="tabpanel" aria-labelledby="xc-tab-5" data-i="5">
+              <span class="xc-big" aria-hidden="true">06</span>
+              <svg class="xc-ico" viewBox="0 0 24 24" aria-hidden="true"><circle pathLength="1" cx="12" cy="12" r="10"/><circle pathLength="1" cx="12" cy="12" r="6"/><circle pathLength="1" cx="12" cy="12" r="2"/></svg>
+              <p class="xc-kicker"><span class="xv-dot"></span>Cours collectif</p>
+              <h3 class="xc-title">C.A.F</h3>
+              <p class="xc-tag">Cuisses · Abdos · Fessiers</p>
+              <p class="xc-desc">Un cours ciblé pour raffermir et tonifier le bas du corps et la sangle abdominale, avec des exercices simples et efficaces.</p>
+              <div class="xc-meta">
+                <div><span class="xc-label">Intensité</span><span class="xc-bars" data-v="3" role="img" aria-label="Intensité 3 sur 5"><i></i><i></i><i></i><i></i><i></i></span></div>
+                <div><span class="xc-label">Objectif</span><span class="xc-val">Tonification · Silhouette</span></div>
+              </div>
+              <div class="xc-cta">
+                <a class="xc-btn" href="https://wa.me/21655755093?text=Bonjour%20Xtra%20BBF%20Gym%2C%20je%20souhaite%20des%20informations%20sur%20le%20cours%20C.A.F." target="_blank" rel="noopener noreferrer">Réserver ce cours <span aria-hidden="true">→</span></a>
+                <button type="button" class="xc-btn2" data-xc-signup>S'inscrire</button>
+              </div>
+            </article>
+            <article class="xc-card" id="xc-card-6" role="tabpanel" aria-labelledby="xc-tab-6" data-i="6">
+              <span class="xc-big" aria-hidden="true">07</span>
+              <svg class="xc-ico" viewBox="0 0 24 24" aria-hidden="true"><rect pathLength="1" x="6" y="3" width="5.5" height="5" rx="1.5"/><rect pathLength="1" x="12.5" y="3" width="5.5" height="5" rx="1.5"/><rect pathLength="1" x="6" y="9.5" width="5.5" height="5" rx="1.5"/><rect pathLength="1" x="12.5" y="9.5" width="5.5" height="5" rx="1.5"/><rect pathLength="1" x="6" y="16" width="5.5" height="5" rx="1.5"/><rect pathLength="1" x="12.5" y="16" width="5.5" height="5" rx="1.5"/></svg>
+              <p class="xc-kicker"><span class="xv-dot"></span>Cours collectif</p>
+              <h3 class="xc-title">100% Abdo</h3>
+              <p class="xc-tag">Sangle abdominale</p>
+              <p class="xc-desc">Une séance 100 % dédiée aux abdominaux et au gainage pour un ventre plus ferme, une meilleure posture et un dos protégé.</p>
+              <div class="xc-meta">
+                <div><span class="xc-label">Intensité</span><span class="xc-bars" data-v="3" role="img" aria-label="Intensité 3 sur 5"><i></i><i></i><i></i><i></i><i></i></span></div>
+                <div><span class="xc-label">Objectif</span><span class="xc-val">Abdos · Gainage</span></div>
+              </div>
+              <div class="xc-cta">
+                <a class="xc-btn" href="https://wa.me/21655755093?text=Bonjour%20Xtra%20BBF%20Gym%2C%20je%20souhaite%20des%20informations%20sur%20le%20cours%20100%25%20Abdo." target="_blank" rel="noopener noreferrer">Réserver ce cours <span aria-hidden="true">→</span></a>
+                <button type="button" class="xc-btn2" data-xc-signup>S'inscrire</button>
+              </div>
+            </article>
+            <article class="xc-card" id="xc-card-7" role="tabpanel" aria-labelledby="xc-tab-7" data-i="7">
+              <span class="xc-big" aria-hidden="true">08</span>
+              <svg class="xc-ico" viewBox="0 0 24 24" aria-hidden="true"><circle pathLength="1" cx="12" cy="4" r="2"/><path pathLength="1" d="M12 7v6l-3 8M12 13l3 8M4 8.5l8 -1.5 8 1.5"/></svg>
+              <p class="xc-kicker"><span class="xv-dot"></span>Cours collectif</p>
+              <h3 class="xc-title">Stretching</h3>
+              <p class="xc-tag">Souplesse &amp; récupération</p>
+              <p class="xc-desc">Étirements guidés pour gagner en souplesse, mieux récupérer après l'effort et prévenir les blessures. Le complément idéal de tes entraînements.</p>
+              <div class="xc-meta">
+                <div><span class="xc-label">Intensité</span><span class="xc-bars" data-v="1" role="img" aria-label="Intensité 1 sur 5"><i></i><i></i><i></i><i></i><i></i></span></div>
+                <div><span class="xc-label">Objectif</span><span class="xc-val">Souplesse · Récupération</span></div>
+              </div>
+              <div class="xc-cta">
+                <a class="xc-btn" href="https://wa.me/21655755093?text=Bonjour%20Xtra%20BBF%20Gym%2C%20je%20souhaite%20des%20informations%20sur%20le%20cours%20Stretching." target="_blank" rel="noopener noreferrer">Réserver ce cours <span aria-hidden="true">→</span></a>
+                <button type="button" class="xc-btn2" data-xc-signup>S'inscrire</button>
+              </div>
+            </article>
+            </div>
+            <div class="xc-progress" aria-hidden="true"><i></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="faq" class="xv-faq" aria-labelledby="xv-faq-title">
       <div class="xv-wrap">
         <div class="xv-head">
@@ -6974,7 +7317,7 @@ function JK(){const i=fe.useRef(null),G=fe.useRef(null),[e,t]=fe.useState(!1),[f
         <details class="xv-q"><summary>Combien coûte l'abonnement ?<span class="xv-plus" aria-hidden="true"></span></summary><p>1 mois : 90 DT. 3 mois : 230 DT. 6 mois : 380 DT. 12 mois : 620 DT. Des frais d'inscription de 30 DT s'appliquent uniquement la première fois.</p></details>
         <details class="xv-q"><summary>Y a-t-il un tarif étudiant ?<span class="xv-plus" aria-hidden="true"></span></summary><p>Oui, les étudiants de l'INSAT ont un tarif réduit : 3 mois à 180 DT, 6 mois à 300 DT et 12 mois à 400 DT (1 mois : 90 DT).</p></details>
         <details class="xv-q"><summary>Le coaching est-il inclus ?<span class="xv-plus" aria-hidden="true"></span></summary><p>Oui. Dès l'abonnement 3 mois, le coaching est inclus avec un programme personnalisé et un suivi mensuel. Les abonnements 6 et 12 mois ajoutent le coaching premium, des conseils nutrition et les cours collectifs.</p></details>
-        <details class="xv-q"><summary>Quelles activités peut-on pratiquer ?<span class="xv-plus" aria-hidden="true"></span></summary><p>Musculation, force, CrossFit, HIIT, cardio et fitness, encadrés par nos coachs Tarek, Chams, Rihem et Salim, avec des équipements modernes.</p></details>
+        <details class="xv-q"><summary>Quelles activités peut-on pratiquer ?<span class="xv-plus" aria-hidden="true"></span></summary><p>Musculation et cardio en salle, CrossFit, HIIT et des cours collectifs : Cardio mix, Circuit training, TRX, C.A.F (cuisses-abdos-fessiers), 100% Abdo et Stretching. Le tout encadré par nos coachs Tarek, Chams, Rihem et Salim, avec des équipements modernes.</p></details>
         <details class="xv-q"><summary>Y a-t-il des vestiaires et des douches ?<span class="xv-plus" aria-hidden="true"></span></summary><p>Oui, la salle dispose de vestiaires et de douches. Les abonnements 3, 6 et 12 mois donnent accès aux vestiaires VIP.</p></details>
         <details class="xv-q"><summary>Comment s'inscrire ?<span class="xv-plus" aria-hidden="true"></span></summary><p>Cliquez sur « S'inscrire » sur le site : votre demande est envoyée sur WhatsApp. Vous pouvez aussi appeler ou écrire au 55 755 093, ou passer directement à la salle.</p></details>
         </div>
@@ -7007,6 +7350,86 @@ function JK(){const i=fe.useRef(null),G=fe.useRef(null),[e,t]=fe.useState(!1),[f
         update();
         var b = document.getElementById('xv-bar-signup');
         if (b) b.addEventListener('click', function(){ if (typeof openBBFModal === 'function') openBBFModal("S'INSCRIRE MAINTENANT"); });
+      })();
+    </script>
+    <script id="xtra-courses-script">
+      (function(){
+        var sec = document.getElementById('services');
+        if (!sec) return;
+        var tries = 0, t = setInterval(function(){
+          var about = document.getElementById('about');
+          if (about && about.parentNode) { about.parentNode.insertBefore(sec, about.nextSibling); done(); }
+          else if (++tries > 150) done();
+        }, 100);
+        function done(){ clearInterval(t); sec.classList.add('xc-ready'); init(); }
+        function init(){
+          if (sec.__xc) return; sec.__xc = 1;
+          var tabs = [].slice.call(sec.querySelectorAll('.xc-tab')), cards = [].slice.call(sec.querySelectorAll('.xc-card'));
+          var list = sec.querySelector('.xc-list'), ind = sec.querySelector('.xc-ind'), bar = sec.querySelector('.xc-progress i');
+          var panel = sec.querySelector('.xc-panel'), vid = sec.querySelector('.xc-video');
+          var n = tabs.length, cur = 0;
+          var calm = !!window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          var wide = window.matchMedia ? window.matchMedia('(min-width: 1024px)') : {matches: true};
+          function place(){
+            if (!ind || !wide.matches) return;
+            var b = tabs[cur]; ind.style.height = b.offsetHeight + 'px';
+            ind.style.transform = 'translateY(' + (b.parentNode.offsetTop + list.offsetTop) + 'px)';
+          }
+          function chip(){
+            if (list.scrollWidth <= list.clientWidth + 2) return;
+            var b = tabs[cur].parentNode, x = b.offsetLeft - (list.clientWidth - b.offsetWidth) / 2;
+            list.scrollTo({left: Math.max(0, x), behavior: calm ? 'auto' : 'smooth'});
+          }
+          function restartBar(){ if (!bar) return; bar.style.animation = 'none'; void bar.offsetWidth; bar.style.animation = ''; }
+          function go(i, user){
+            i = (i + n) % n;
+            if (user) { sec.classList.remove('xc-auto'); sec.classList.add('xc-manual'); }
+            if (i === cur) return;
+            tabs[cur].classList.remove('is-on'); tabs[cur].setAttribute('aria-selected', 'false'); tabs[cur].tabIndex = -1; cards[cur].classList.remove('is-on');
+            cur = i;
+            tabs[cur].classList.add('is-on'); tabs[cur].setAttribute('aria-selected', 'true'); tabs[cur].tabIndex = 0; cards[cur].classList.add('is-on');
+            place(); chip(); restartBar();
+          }
+          tabs.forEach(function(b, i){ b.addEventListener('click', function(){ go(i, true); }); });
+          list.addEventListener('keydown', function(e){
+            var k = e.key, d = (k === 'ArrowDown' || k === 'ArrowRight') ? 1 : (k === 'ArrowUp' || k === 'ArrowLeft') ? -1 : 0;
+            if (k === 'Home') { go(0, true); } else if (k === 'End') { go(n - 1, true); } else if (!d) return; else go(cur + d, true);
+            e.preventDefault(); e.stopPropagation(); tabs[cur].focus({preventScroll: true});
+          });
+          var sx = 0, sy = 0;
+          panel.addEventListener('touchstart', function(e){ sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, {passive: true});
+          panel.addEventListener('touchend', function(e){
+            var dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
+            if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.3) go(cur + (dx < 0 ? 1 : -1), true);
+          }, {passive: true});
+          [].forEach.call(sec.querySelectorAll('[data-xc-signup]'), function(b){
+            b.addEventListener('click', function(){ if (typeof openBBFModal === 'function') openBBFModal("S'INSCRIRE MAINTENANT"); });
+          });
+          if (bar) bar.addEventListener('animationend', function(){ if (sec.classList.contains('xc-auto')) go(cur + 1, false); });
+          if (!calm) sec.classList.add('xc-auto');
+          panel.addEventListener('mouseenter', function(){ sec.classList.add('xc-hold'); });
+          panel.addEventListener('mouseleave', function(){ sec.classList.remove('xc-hold'); });
+          sec.addEventListener('focusin', function(){ sec.classList.add('xc-hold'); });
+          sec.addEventListener('focusout', function(){ sec.classList.remove('xc-hold'); });
+          var save = navigator.connection && navigator.connection.saveData;
+          function wake(on){
+            sec.classList.toggle('xc-in', on);
+            if (!vid || calm || save) return;
+            if (on) {
+              if (!vid.getAttribute('src')) {
+                vid.src = wide.matches ? vid.getAttribute('data-d') : vid.getAttribute('data-m');
+                vid.addEventListener('playing', function(){ vid.classList.add('is-on'); }, {once: true});
+              }
+              var p = vid.play(); if (p && p.catch) p.catch(function(){});
+            } else vid.pause();
+          }
+          if ('IntersectionObserver' in window) {
+            new IntersectionObserver(function(es){ wake(es[0].isIntersecting); }, {rootMargin: '200px 0px'}).observe(sec);
+          } else wake(true);
+          window.addEventListener('resize', place);
+          if (document.fonts && document.fonts.ready) document.fonts.ready.then(place);
+          place(); setTimeout(place, 600);
+        }
       })();
     </script>
 </body>
